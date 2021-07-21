@@ -89,3 +89,5 @@ RUN sed -i '6i openssl_conf=openssl_def' /usr/local/ssl/openssl.cnf \
   && echo "dynamic_path = /usr/local/ssl/lib/engines-3/gost.so" >> /usr/local/ssl/openssl.cnf \
   && echo "default_algorithms = ALL" >>/usr/local/ssl/openssl.cnf \
   && echo "CRYPT_PARAMS = id-Gost28147-89-CryptoPro-A-ParamSet" >> /usr/local/ssl/openssl.cnf
+
+CMD ["stunnel"]
